@@ -1,3 +1,9 @@
-const PRIMARY = "#98fb98";
+const Colors = {
+  primary: "#98fb98",
+  common: {
+    white: "#FFFFFF",
+    black: "#000000",
+  },
+};
 
-export { PRIMARY };
+export { Colors };
