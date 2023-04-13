@@ -5,6 +5,7 @@ import {
   FormControl,
   Grid,
   InputAdornment,
+  Link,
   MenuItem,
   OutlinedInput,
   Select,
@@ -34,7 +35,9 @@ export function PageHeader(props: IPageHeaderProps) {
   return (
     <Grid container alignItems={"center"} justifyContent={"space-between"}>
       <Grid item>
-        <NetflixIcon />
+        <Link href="/">
+          <NetflixIcon />
+        </Link>
       </Grid>
       <Grid item>
         <Grid container alignItems={"center"} columnSpacing={3}>
