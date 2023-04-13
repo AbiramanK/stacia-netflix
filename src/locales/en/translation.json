@@ -12,7 +12,9 @@
             },
             "section3": {
                 "title": "Download your shows to watch offline.",
-                "description1": "Save your favourites easily and always have something to watch."
+                "description1": "Save your favourites easily and always have something to watch.",
+                "stranger-things": "Stranger Things",
+                "downloading": "Downloading..."
             },
             "section4": {
                 "title": "Watch everywhere.",

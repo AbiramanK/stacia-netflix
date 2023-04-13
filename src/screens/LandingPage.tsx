@@ -7,6 +7,7 @@ import {
   Grid,
   TextField,
   ThemeProvider,
+  Typography,
   useTheme,
 } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -16,6 +17,9 @@ import { useTranslation } from "react-i18next";
 import LandingPageImage from "src/assets/images/netflix_landing_page.jpg";
 import TV from "src/assets/images/tv.png";
 import VideoTvIn from "src/assets/videos/video-tv-in-0819.m4v";
+import Mobile from "src/assets/images/mobile-0819.jpg";
+import Boxshot from "src/assets/images/boxshot.png";
+import DownloadIcon from "src/assets/gifs/download-icon.gif";
 
 import {
   PageDescription1,
@@ -141,6 +145,73 @@ export function LandingPage(props: ILandingPageProps) {
             <source src={VideoTvIn} type="video/mp4" />
           </video>
           <img src={TV} alt={"tv"} />
+        </Box>
+      </PageSection>
+      <PageSectionDivider />
+      <PageSection
+        pageTitle={t("pages.landing-page.section3.title")}
+        pageDescription={t("pages.landing-page.section3.description1")}
+        flexDirection={"row-reverse"}
+      >
+        <Box position={"relative"}>
+          <img src={Mobile} alt={"mobile"} />
+          <Grid
+            container
+            alignItems={"center"}
+            sx={{
+              padding: "0.5rem 0.75rem",
+              border: `2px solid rgba(152, 251, 152, 0.2)`,
+              boxShadow: "0 0 2em 0 rgb(0 0 0)",
+              borderRadius: "0.75rem",
+              minWidth: "15rem",
+              width: 410,
+              position: "absolute",
+              bottom: 35,
+              left: 120,
+              backgroundColor: Colors?.common?.black,
+            }}
+          >
+            <Grid item xs={10}>
+              <Grid container alignItems={"center"} columnGap={2}>
+                <Grid item>
+                  <img
+                    src={Boxshot}
+                    alt="Boxshot"
+                    style={{ height: "4.5rem" }}
+                  />
+                </Grid>
+                <Grid item>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      fontSize: "1rem",
+                      fontWeight: "500",
+                      color: Colors?.common?.white,
+                    }}
+                  >
+                    {t("pages.landing-page.section3.stranger-things")}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      fontSize: "0.875rem",
+                      fontWeight: "400",
+                      color: "#0071eb",
+                    }}
+                  >
+                    {t("pages.landing-page.section3.downloading")}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={2}>
+              <img
+                src={DownloadIcon}
+                alt="Download Icon"
+                style={{ height: "3.75rem" }}
+              />
+            </Grid>
+          </Grid>
         </Box>
       </PageSection>
       <PageSectionDivider />
