@@ -14,11 +14,14 @@ import { deepmerge } from "@mui/utils";
 import { useTranslation } from "react-i18next";
 
 import LandingPageImage from "src/assets/images/netflix_landing_page.jpg";
+import TV from "src/assets/images/tv.png";
+import VideoTvIn from "src/assets/videos/video-tv-in-0819.m4v";
 
 import {
   PageDescription1,
   PageDescription2,
   PageHeader,
+  PageSection,
   PageSectionDivider,
   PageTitle,
 } from "src/components";
@@ -112,6 +115,34 @@ export function LandingPage(props: ILandingPageProps) {
           </Box>
         </Box>
       </Container>
+      <PageSectionDivider />
+      <PageSection
+        pageTitle={t("pages.landing-page.section2.title")}
+        pageDescription={t("pages.landing-page.section2.description1")}
+      >
+        <Box sx={{ position: "relative" }}>
+          <video
+            autoPlay
+            playsInline
+            muted
+            loop
+            style={{
+              position: "absolute",
+              top: 100,
+              left: 79,
+              zIndex: -1,
+              overflow: "hidden",
+              width: "100%",
+              height: "100%",
+              maxWidth: 475,
+              maxHeight: 262,
+            }}
+          >
+            <source src={VideoTvIn} type="video/mp4" />
+          </video>
+          <img src={TV} alt={"tv"} />
+        </Box>
+      </PageSection>
       <PageSectionDivider />
     </React.Fragment>
   );
