@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+import "src/i18n/config";
+import "src/App.css";
+
+import { LandingPage } from "./screens";
+import { PRIMARY } from "./constants/Colors";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: { main: PRIMARY },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <LandingPage />
+    </ThemeProvider>
   );
 }
 
