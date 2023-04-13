@@ -17,15 +17,18 @@ import { ReactComponent as NetflixIcon } from "src/assets/images/netflix-logo.sv
 export interface IPageHeaderProps {}
 
 export function PageHeader(props: IPageHeaderProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const [language, setLanguage] = useState<string>("english");
+  const [language, setLanguage] = useState<string>("en");
 
   function onLanguageChange(
     event: SelectChangeEvent<string>,
     child: React.ReactNode
   ) {
-    setLanguage(event?.target?.value);
+    const lang = event?.target?.value;
+
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
   }
 
   return (
@@ -51,8 +54,8 @@ export function PageHeader(props: IPageHeaderProps) {
                   </InputAdornment>
                 }
               >
-                <MenuItem value={"english"}>{t("languages.english")}</MenuItem>
-                <MenuItem value={"tamil"}>{t("languages.tamil")}</MenuItem>
+                <MenuItem value={"en"}>{t("languages.english")}</MenuItem>
+                <MenuItem value={"ta"}>{t("languages.tamil")}</MenuItem>
               </Select>
             </FormControl>
           </Grid>
