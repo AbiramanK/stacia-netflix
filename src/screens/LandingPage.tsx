@@ -5,7 +5,6 @@ import {
   Container,
   createTheme,
   Grid,
-  Paper,
   TextField,
   ThemeProvider,
   useTheme,
@@ -20,6 +19,7 @@ import {
   PageDescription1,
   PageDescription2,
   PageHeader,
+  PageSectionDivider,
   PageTitle,
 } from "src/components";
 import { Colors } from "src/constants/Colors";
@@ -112,6 +112,7 @@ export function LandingPage(props: ILandingPageProps) {
           </Box>
         </Box>
       </Container>
+      <PageSectionDivider />
     </React.Fragment>
   );
 }
