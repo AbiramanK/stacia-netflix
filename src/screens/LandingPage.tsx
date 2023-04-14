@@ -25,15 +25,18 @@ import VideoDevicesIn from "src/assets/videos/video-devices-in.m4v";
 import ChildrenWithRabbit from "src/assets/images/children-with-rabbit.png";
 
 import {
+  FrequentlyAskedQuestions,
   PageDescription1,
   PageDescription2,
   PageHeader,
   PageSection,
   PageSectionDivider,
+  PageSectionGridContainer,
   PageTitle,
   PageVideoImagePileIn,
 } from "src/components";
 import { Colors } from "src/constants/Colors";
+import { QuestionAnswerInterface } from "src/components/FrequentlyAskedQuetions";
 
 export interface ILandingPageProps {}
 
@@ -64,6 +67,43 @@ export function LandingPage(props: ILandingPageProps) {
   });
 
   const theme = createTheme(deepmerge(innerTheme, outerTheme));
+
+  const frequentlyAskedQuestions: QuestionAnswerInterface[] = [
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q1.question"),
+      answer: [
+        t("pages.landing-page.frequently-asked-questions.q1.answer.a1"),
+        t("pages.landing-page.frequently-asked-questions.q1.answer.a2"),
+      ],
+    },
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q2.question"),
+      answer: [t("pages.landing-page.frequently-asked-questions.q2.answer.a1")],
+    },
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q3.question"),
+      answer: [
+        t("pages.landing-page.frequently-asked-questions.q3.answer.a1"),
+        t("pages.landing-page.frequently-asked-questions.q3.answer.a2"),
+      ],
+    },
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q4.question"),
+      answer: [t("pages.landing-page.frequently-asked-questions.q4.answer.a1")],
+    },
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q5.question"),
+      answer: [t("pages.landing-page.frequently-asked-questions.q5.answer.a1")],
+    },
+    {
+      question: t("pages.landing-page.frequently-asked-questions.q6.question"),
+      answer: [
+        t("pages.landing-page.frequently-asked-questions.q6.answer.a1"),
+        t("pages.landing-page.frequently-asked-questions.q6.answer.a2"),
+      ],
+    },
+  ];
+
   return (
     <React.Fragment>
       <Container
@@ -228,6 +268,12 @@ export function LandingPage(props: ILandingPageProps) {
       >
         <img src={ChildrenWithRabbit} alt={"Children With Rabbit"} />
       </PageSection>
+      <PageSectionDivider />
+      <PageSectionGridContainer
+        containerStyle={{ sx: { paddingInline: "3rem" } }}
+      >
+        <FrequentlyAskedQuestions questionAnswer={frequentlyAskedQuestions} />
+      </PageSectionGridContainer>
     </React.Fragment>
   );
 }

@@ -5,6 +5,8 @@ import PageDescription2 from "./PageDescription2";
 import PageSectionDivider from "./PageSectionDivider";
 import PageSection from "./PageSection";
 import PageVideoImagePileIn from "./PageVideoImagePileIn";
+import FrequentlyAskedQuestions from "./FrequentlyAskedQuetions";
+import QuestionAnswerAccordion from "./QuestionAnswerAccordion";
 import PageSectionGridContainer from "./PageSectionGridContainer";
 
 export {
@@ -15,5 +17,7 @@ export {
   PageSectionDivider,
   PageSection,
   PageVideoImagePileIn,
+  FrequentlyAskedQuestions,
+  QuestionAnswerAccordion,
   PageSectionGridContainer,
 };

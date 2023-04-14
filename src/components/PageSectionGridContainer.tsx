@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, BoxProps, Grid } from "@mui/material";
 
 import { Colors } from "src/constants/Colors";
 
@@ -8,13 +8,20 @@ export type PageSectionFlexDirectionType = "row" | "row-reverse";
 export interface IPageSectionGridContainerProps {
   flexDirection?: PageSectionFlexDirectionType;
   children: React.ReactNode;
+  containerStyle?: Pick<BoxProps, "sx">;
 }
 
 export function PageSectionGridContainer(
   props: IPageSectionGridContainerProps
 ) {
   return (
-    <Box padding={"4.5rem 0"} sx={{ backgroundColor: Colors?.common?.black }}>
+    <Box
+      padding={"4.5rem 0"}
+      sx={{
+        backgroundColor: Colors?.common?.black,
+        ...props?.containerStyle?.sx,
+      }}
+    >
       <Grid
         container
         alignItems={"center"}
