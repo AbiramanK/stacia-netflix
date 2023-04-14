@@ -8,6 +8,7 @@ import PageVideoImagePileIn from "./PageVideoImagePileIn";
 import FrequentlyAskedQuestions from "./FrequentlyAskedQuetions";
 import QuestionAnswerAccordion from "./QuestionAnswerAccordion";
 import PageSectionGridContainer from "./PageSectionGridContainer";
+import GetStartedSection from "./GetStartedSection";
 
 export {
   PageHeader,
@@ -20,4 +21,5 @@ export {
   FrequentlyAskedQuestions,
   QuestionAnswerAccordion,
   PageSectionGridContainer,
+  GetStartedSection,
 };

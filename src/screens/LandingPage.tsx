@@ -1,16 +1,13 @@
 import React from "react";
 import {
   Box,
-  Button,
   Container,
   createTheme,
   Grid,
-  TextField,
   ThemeProvider,
   Typography,
   useTheme,
 } from "@mui/material";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { deepmerge } from "@mui/utils";
 import { useTranslation } from "react-i18next";
 
@@ -26,8 +23,8 @@ import ChildrenWithRabbit from "src/assets/images/children-with-rabbit.png";
 
 import {
   FrequentlyAskedQuestions,
+  GetStartedSection,
   PageDescription1,
-  PageDescription2,
   PageHeader,
   PageSection,
   PageSectionDivider,
@@ -133,34 +130,7 @@ export function LandingPage(props: ILandingPageProps) {
           <PageDescription1>
             {t("pages.landing-page.section1.description1")}
           </PageDescription1>
-          <Box display={"flex"} flexDirection={"column"} rowGap={2}>
-            <PageDescription2>
-              {t("pages.landing-page.section1.description2")}
-            </PageDescription2>
-            <Grid container alignItems={"center"}>
-              <Grid item xs={8}>
-                <TextField
-                  variant="outlined"
-                  label={t("common.inputs.email")}
-                  sx={{ width: "stretch" }}
-                />
-              </Grid>
-              <Grid item xs={4} sx={{ textAlign: "right" }}>
-                <Button
-                  size="large"
-                  variant="contained"
-                  endIcon={<ArrowForwardIosIcon />}
-                  sx={{
-                    height: "auto",
-                    fontSize: "1.4rem",
-                    fontWeight: "500",
-                  }}
-                >
-                  {t("common.buttons.get-started")}
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
+          <GetStartedSection />
         </Box>
       </Container>
       <PageSectionDivider />
@@ -271,8 +241,10 @@ export function LandingPage(props: ILandingPageProps) {
       <PageSectionDivider />
       <PageSectionGridContainer
         containerStyle={{ sx: { paddingInline: "3rem" } }}
+        gridStyle={{ sx: { justifyContent: "flex-start", rowGap: 2.5 } }}
       >
         <FrequentlyAskedQuestions questionAnswer={frequentlyAskedQuestions} />
+        <GetStartedSection />
       </PageSectionGridContainer>
     </React.Fragment>
   );

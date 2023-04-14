@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, BoxProps, Grid } from "@mui/material";
+import { Box, BoxProps, Grid, GridProps } from "@mui/material";
 
 import { Colors } from "src/constants/Colors";
 
@@ -9,6 +9,7 @@ export interface IPageSectionGridContainerProps {
   flexDirection?: PageSectionFlexDirectionType;
   children: React.ReactNode;
   containerStyle?: Pick<BoxProps, "sx">;
+  gridStyle?: Pick<GridProps, "sx">;
 }
 
 export function PageSectionGridContainer(
@@ -30,6 +31,7 @@ export function PageSectionGridContainer(
         sx={{
           margin: "auto",
           maxWidth: "calc(100% - 4rem)",
+          ...props?.gridStyle?.sx,
         }}
       >
         {props?.children}
