@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  createTheme,
-  Grid,
-  ThemeProvider,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import { deepmerge } from "@mui/utils";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 import LandingPageImage from "src/assets/images/netflix_landing_page.jpg";
@@ -39,31 +30,6 @@ export interface ILandingPageProps {}
 
 export function LandingPage(props: ILandingPageProps) {
   const { t } = useTranslation();
-
-  const outerTheme = useTheme();
-  const innerTheme = createTheme({
-    components: {
-      MuiSelect: {
-        styleOverrides: {
-          outlined: {
-            color: Colors?.primary,
-          },
-          iconOutlined: {
-            color: Colors?.primary,
-          },
-        },
-      },
-      MuiInputAdornment: {
-        styleOverrides: {
-          root: {
-            color: Colors?.primary,
-          },
-        },
-      },
-    },
-  });
-
-  const theme = createTheme(deepmerge(innerTheme, outerTheme));
 
   const frequentlyAskedQuestions: QuestionAnswerInterface[] = [
     {
@@ -113,9 +79,7 @@ export function LandingPage(props: ILandingPageProps) {
           flexDirection: "column",
         }}
       >
-        <ThemeProvider theme={theme}>
-          <PageHeader />
-        </ThemeProvider>
+        <PageHeader />
         <Box
           sx={{
             flexGrow: 1,
