@@ -22,6 +22,7 @@ import Boxshot from "src/assets/images/boxshot.png";
 import DownloadIcon from "src/assets/gifs/download-icon.gif";
 import DevicePileIn from "src/assets/images/device-pile-in.png";
 import VideoDevicesIn from "src/assets/videos/video-devices-in.m4v";
+import ChildrenWithRabbit from "src/assets/images/children-with-rabbit.png";
 
 import {
   PageDescription1,
@@ -220,6 +221,13 @@ export function LandingPage(props: ILandingPageProps) {
         />
       </PageSection>
       <PageSectionDivider />
+      <PageSection
+        pageTitle={t("pages.landing-page.section5.title")}
+        pageDescription={t("pages.landing-page.section5.description1")}
+        flexDirection={"row-reverse"}
+      >
+        <img src={ChildrenWithRabbit} alt={"Children With Rabbit"} />
+      </PageSection>
     </React.Fragment>
   );
 }
