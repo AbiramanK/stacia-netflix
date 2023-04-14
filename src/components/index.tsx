@@ -12,6 +12,7 @@ import GetStartedSection from "./GetStartedSection";
 import LanguageSwitchButton from "./LanguageSwitchButton";
 import PageBody1 from "./PageBody1";
 import PageBody2 from "./PageBody2";
+import PageMenuList from "./PageMenuList";
 
 export {
   PageHeader,
@@ -28,4 +29,5 @@ export {
   LanguageSwitchButton,
   PageBody1,
   PageBody2,
+  PageMenuList,
 };
