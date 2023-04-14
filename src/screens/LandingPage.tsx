@@ -20,6 +20,8 @@ import VideoTvIn from "src/assets/videos/video-tv-in-0819.m4v";
 import Mobile from "src/assets/images/mobile-0819.jpg";
 import Boxshot from "src/assets/images/boxshot.png";
 import DownloadIcon from "src/assets/gifs/download-icon.gif";
+import DevicePileIn from "src/assets/images/device-pile-in.png";
+import VideoDevicesIn from "src/assets/videos/video-devices-in.m4v";
 
 import {
   PageDescription1,
@@ -212,6 +214,34 @@ export function LandingPage(props: ILandingPageProps) {
               />
             </Grid>
           </Grid>
+        </Box>
+      </PageSection>
+      <PageSectionDivider />
+      <PageSection
+        pageTitle={t("pages.landing-page.section4.title")}
+        pageDescription={t("pages.landing-page.section4.description1")}
+      >
+        <Box sx={{ position: "relative" }}>
+          <video
+            autoPlay
+            playsInline
+            muted
+            loop
+            style={{
+              position: "absolute",
+              top: 45,
+              left: 120,
+              zIndex: -1,
+              overflow: "hidden",
+              width: "100%",
+              height: "100%",
+              maxWidth: 400,
+              maxHeight: 250,
+            }}
+          >
+            <source src={VideoDevicesIn} type="video/mp4" />
+          </video>
+          <img src={DevicePileIn} alt={"Device Pile In"} />
         </Box>
       </PageSection>
       <PageSectionDivider />
