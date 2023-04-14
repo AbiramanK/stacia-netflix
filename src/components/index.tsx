@@ -9,6 +9,7 @@ import FrequentlyAskedQuestions from "./FrequentlyAskedQuetions";
 import QuestionAnswerAccordion from "./QuestionAnswerAccordion";
 import PageSectionGridContainer from "./PageSectionGridContainer";
 import GetStartedSection from "./GetStartedSection";
+import LanguageSwitchButton from "./LanguageSwitchButton";
 
 export {
   PageHeader,
@@ -22,4 +23,5 @@ export {
   QuestionAnswerAccordion,
   PageSectionGridContainer,
   GetStartedSection,
+  LanguageSwitchButton,
 };

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import "src/i18n/config";
 import "src/App.css";
 
 import { LandingPage } from "./screens";
 import { Colors } from "./constants/Colors";
+import { LanguageSwitchContext } from "./contexts";
+import { getData, storeData } from "./utilities/Storage";
+import { APP_LANGUAGE_KEY } from "./constants/Keys";
+import { APP_DEFAULT_LANGUAGE } from "./constants/Configs";
 
 function App() {
+  const { i18n } = useTranslation();
+
   const theme = createTheme({
     palette: {
       primary: { main: Colors.primary },
@@ -46,10 +53,40 @@ function App() {
     },
   });
 
+  const [language, setLanguage] = useState<string>(APP_DEFAULT_LANGUAGE);
+
+  useEffect(() => {
+    initialDataLoad();
+    // eslint-disable-next-line
+  }, []);
+
+  async function initialDataLoad() {
+    const language = await getData(APP_LANGUAGE_KEY);
+
+    if (language!) {
+      setLanguage(language);
+
+      if (i18n.language !== language) {
+        updateLanguage(language);
+      }
+    }
+  }
+
+  function updateLanguage(language: string) {
+    setLanguage(language);
+    i18n.changeLanguage(language);
+
+    storeData(APP_LANGUAGE_KEY, language);
+  }
+
   return (
-    <ThemeProvider theme={theme}>
-      <LandingPage />
-    </ThemeProvider>
+    <LanguageSwitchContext.Provider
+      value={{ language: language, updateLanguage }}
+    >
+      <ThemeProvider theme={theme}>
+        <LandingPage />
+      </ThemeProvider>
+    </LanguageSwitchContext.Provider>
   );
 }
 

@@ -1,0 +1,3 @@
+const APP_DEFAULT_LANGUAGE = process.env.REACT_APP_DEFAULT_LANGUAGE ?? "en";
+
+export { APP_DEFAULT_LANGUAGE };

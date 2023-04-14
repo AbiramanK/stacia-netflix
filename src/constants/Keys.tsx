@@ -1,0 +1,3 @@
+const APP_LANGUAGE_KEY = "APP_LANGUAGE_KEY";
+
+export { APP_LANGUAGE_KEY };

@@ -1,36 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Button,
-  FormControl,
-  Grid,
-  InputAdornment,
-  Link,
-  MenuItem,
-  OutlinedInput,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
-import { Language as LanguageIcon } from "@mui/icons-material";
+import { Button, Grid, Link } from "@mui/material";
 
 import { ReactComponent as NetflixIcon } from "src/assets/images/netflix-logo.svg";
+import LanguageSwitchButton from "./LanguageSwitchButton";
 
 export interface IPageHeaderProps {}
 
 export function PageHeader(props: IPageHeaderProps) {
-  const { t, i18n } = useTranslation();
-
-  const [language, setLanguage] = useState<string>("en");
-
-  function onLanguageChange(
-    event: SelectChangeEvent<string>,
-    child: React.ReactNode
-  ) {
-    const lang = event?.target?.value;
-
-    i18n.changeLanguage(lang);
-    setLanguage(lang);
-  }
+  const { t } = useTranslation();
 
   return (
     <Grid container alignItems={"center"} justifyContent={"space-between"}>
@@ -42,25 +20,7 @@ export function PageHeader(props: IPageHeaderProps) {
       <Grid item>
         <Grid container alignItems={"center"} columnSpacing={3}>
           <Grid item>
-            <FormControl fullWidth>
-              <Select
-                displayEmpty
-                size="small"
-                id="languageSelect"
-                value={language}
-                onChange={onLanguageChange}
-                input={<OutlinedInput />}
-                inputProps={{ "aria-label": "Without label" }}
-                startAdornment={
-                  <InputAdornment position="start">
-                    <LanguageIcon />
-                  </InputAdornment>
-                }
-              >
-                <MenuItem value={"en"}>{t("languages.english")}</MenuItem>
-                <MenuItem value={"ta"}>{t("languages.tamil")}</MenuItem>
-              </Select>
-            </FormControl>
+            <LanguageSwitchButton />
           </Grid>
           <Grid item>
             <Button variant="contained">{t("common.buttons.sign-in")}</Button>
