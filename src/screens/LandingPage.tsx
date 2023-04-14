@@ -16,6 +16,7 @@ import {
   FrequentlyAskedQuestions,
   GetStartedSection,
   PageDescription1,
+  PageFooter,
   PageHeader,
   PageSection,
   PageSectionDivider,
@@ -209,6 +210,12 @@ export function LandingPage(props: ILandingPageProps) {
       >
         <FrequentlyAskedQuestions questionAnswer={frequentlyAskedQuestions} />
         <GetStartedSection />
+      </PageSectionGridContainer>
+      <PageSectionDivider />
+      <PageSectionGridContainer
+        containerStyle={{ sx: { paddingInline: "3rem" } }}
+      >
+        <PageFooter />
       </PageSectionGridContainer>
     </React.Fragment>
   );

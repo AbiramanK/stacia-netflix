@@ -66,7 +66,6 @@
                 }
             },
             "page-footer": {
-                "questions": "Questions? Call {{contact-number}}",
                 "menu1": {
                     "faq": "FAQ",
                     "media-centre": "Media Centre",
@@ -87,11 +86,12 @@
                     "privacy": "Privacy",
                     "contact-us": "Contact Us",
                     "only-on-netflix": "Only on Netflix"
-                },
-                "netflix-india": "Netflix India"
+                }
             },
             "texts": {
-                "frequently-asked-questions": "Frequently Asked Questions"
+                "questions": "Questions? Call",
+                "frequently-asked-questions": "Frequently Asked Questions",
+                "netflix-india": "Netflix India"
             }
         }
     },

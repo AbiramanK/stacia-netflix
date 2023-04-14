@@ -10,6 +10,7 @@ import QuestionAnswerAccordion from "./QuestionAnswerAccordion";
 import PageSectionGridContainer from "./PageSectionGridContainer";
 import GetStartedSection from "./GetStartedSection";
 import LanguageSwitchButton from "./LanguageSwitchButton";
+import PageFooter from "./PageFooter";
 import PageBody1 from "./PageBody1";
 import PageBody2 from "./PageBody2";
 import PageMenuList from "./PageMenuList";
@@ -27,6 +28,7 @@ export {
   PageSectionGridContainer,
   GetStartedSection,
   LanguageSwitchButton,
+  PageFooter,
   PageBody1,
   PageBody2,
   PageMenuList,
