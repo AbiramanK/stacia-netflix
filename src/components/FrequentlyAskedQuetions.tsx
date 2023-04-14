@@ -25,7 +25,7 @@ export function FrequentlyAskedQuestions(
       </PageTitle>
       <List>
         {props?.questionAnswer?.map((qa, index) => (
-          <ListItem sx={{ pl: 0, pr: 0 }}>
+          <ListItem sx={{ pl: 0, pr: 0 }} key={index}>
             <QuestionAnswerAccordion
               question={qa.question}
               answer={qa.answer}
