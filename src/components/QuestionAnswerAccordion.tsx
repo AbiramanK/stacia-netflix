@@ -28,6 +28,9 @@ export function QuestionAnswerAccordion(props: IQuestionAnswerAccordionProps) {
             "&.Mui-expanded": {
               margin: 0,
             },
+            "&:hover": {
+              backgroundColor: "rgba(34, 51, 98, 1)",
+            },
           },
         },
       },
