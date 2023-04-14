@@ -30,6 +30,7 @@ import {
   PageSection,
   PageSectionDivider,
   PageTitle,
+  PageVideoImagePileIn,
 } from "src/components";
 import { Colors } from "src/constants/Colors";
 
@@ -126,28 +127,15 @@ export function LandingPage(props: ILandingPageProps) {
         pageTitle={t("pages.landing-page.section2.title")}
         pageDescription={t("pages.landing-page.section2.description1")}
       >
-        <Box sx={{ position: "relative" }}>
-          <video
-            autoPlay
-            playsInline
-            muted
-            loop
-            style={{
-              position: "absolute",
-              top: 100,
-              left: 79,
-              zIndex: -1,
-              overflow: "hidden",
-              width: "100%",
-              height: "100%",
-              maxWidth: 475,
-              maxHeight: 262,
-            }}
-          >
-            <source src={VideoTvIn} type="video/mp4" />
-          </video>
-          <img src={TV} alt={"tv"} />
-        </Box>
+        <PageVideoImagePileIn
+          imageSrc={TV}
+          imageAlt={"tv"}
+          videoSrc={VideoTvIn}
+          videoTop={100}
+          videoLeft={79}
+          videoMaxWidth={475}
+          videoMaxHeight={262}
+        />
       </PageSection>
       <PageSectionDivider />
       <PageSection
@@ -221,28 +209,15 @@ export function LandingPage(props: ILandingPageProps) {
         pageTitle={t("pages.landing-page.section4.title")}
         pageDescription={t("pages.landing-page.section4.description1")}
       >
-        <Box sx={{ position: "relative" }}>
-          <video
-            autoPlay
-            playsInline
-            muted
-            loop
-            style={{
-              position: "absolute",
-              top: 45,
-              left: 120,
-              zIndex: -1,
-              overflow: "hidden",
-              width: "100%",
-              height: "100%",
-              maxWidth: 400,
-              maxHeight: 250,
-            }}
-          >
-            <source src={VideoDevicesIn} type="video/mp4" />
-          </video>
-          <img src={DevicePileIn} alt={"Device Pile In"} />
-        </Box>
+        <PageVideoImagePileIn
+          imageSrc={DevicePileIn}
+          imageAlt={"Device Pile In"}
+          videoSrc={VideoDevicesIn}
+          videoTop={45}
+          videoLeft={120}
+          videoMaxWidth={400}
+          videoMaxHeight={250}
+        />
       </PageSection>
       <PageSectionDivider />
     </React.Fragment>

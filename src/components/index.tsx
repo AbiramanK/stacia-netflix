@@ -4,6 +4,7 @@ import PageDescription1 from "./PageDescription1";
 import PageDescription2 from "./PageDescription2";
 import PageSectionDivider from "./PageSectionDivider";
 import PageSection from "./PageSection";
+import PageVideoImagePileIn from "./PageVideoImagePileIn";
 
 export {
   PageHeader,
@@ -12,4 +13,5 @@ export {
   PageDescription2,
   PageSectionDivider,
   PageSection,
+  PageVideoImagePileIn,
 };
