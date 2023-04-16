@@ -15,6 +15,7 @@ import PageBody1 from "./PageBody1";
 import PageBody2 from "./PageBody2";
 import PageMenuList from "./PageMenuList";
 import LandingPageHomeContainer from "./LandingPageHomeContainer";
+import InputTextField from "./InputTextField";
 
 export {
   PageHeader,
@@ -34,4 +35,5 @@ export {
   PageBody2,
   PageMenuList,
   LandingPageHomeContainer,
+  InputTextField,
 };

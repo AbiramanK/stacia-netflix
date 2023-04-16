@@ -1,9 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Box, Grid, TextField, Button } from "@mui/material";
+import { Box, Grid, Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import PageDescription2 from "./PageDescription2";
+import InputTextField from "./InputTextField";
 
 export interface IGetStartedSectionProps {}
 
@@ -17,10 +18,10 @@ export function GetStartedSection(props: IGetStartedSectionProps) {
       </PageDescription2>
       <Grid container alignItems={"center"}>
         <Grid item xs={8}>
-          <TextField
+          <InputTextField
+            fullWidth
             variant="outlined"
             label={t("common.inputs.email")}
-            sx={{ width: "stretch" }}
           />
         </Grid>
         <Grid item xs={4} sx={{ textAlign: "right" }}>

@@ -24,7 +24,7 @@ function App() {
     components: {
       MuiTextField: {
         styleOverrides: {
-          root: {
+          root: (state) => ({
             color: Colors?.primary,
             backgroundColor: "rgba(0,0,0,0.5)",
             borderColor: Colors?.primary,
@@ -35,20 +35,31 @@ function App() {
             "& .MuiOutlinedInput-root": {
               color: Colors?.common?.white,
               "&:hover fieldset": {
-                borderColor: Colors?.primary,
+                borderColor: state?.ownerState?.error
+                  ? Colors?.error
+                  : Colors?.primary,
                 opacity: 1,
               },
             },
             "& .MuiInputLabel-root": {
-              color: Colors?.primary,
+              color: state?.ownerState?.error ? Colors?.error : Colors?.primary,
             },
-          },
+          }),
         },
       },
       MuiButton: {
         styleOverrides: {
           root: {
             textTransform: "none",
+          },
+        },
+      },
+
+      MuiOutlinedInput: {
+        styleOverrides: {
+          notchedOutline: {
+            borderColor: Colors?.primary,
+            opacity: 0.5,
           },
         },
       },
