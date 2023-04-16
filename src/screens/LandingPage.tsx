@@ -184,16 +184,14 @@ export function LandingPage(props: ILandingPageProps) {
       </PageSection>
       <PageSectionDivider />
       <PageSectionGridContainer
-        containerStyle={{ sx: { paddingInline: "3rem" } }}
-        gridStyle={{ sx: { justifyContent: "flex-start", rowGap: 2.5 } }}
+        containerStyle={{ paddingInline: "3rem" }}
+        gridStyle={{ justifyContent: "flex-start", rowGap: 2.5 }}
       >
         <FrequentlyAskedQuestions questionAnswer={frequentlyAskedQuestions} />
         <GetStartedSection />
       </PageSectionGridContainer>
       <PageSectionDivider />
-      <PageSectionGridContainer
-        containerStyle={{ sx: { paddingInline: "3rem" } }}
-      >
+      <PageSectionGridContainer containerStyle={{ paddingInline: "3rem" }}>
         <PageFooter />
       </PageSectionGridContainer>
     </React.Fragment>

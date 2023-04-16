@@ -8,8 +8,8 @@ export type PageSectionFlexDirectionType = "row" | "row-reverse";
 export interface IPageSectionGridContainerProps {
   flexDirection?: PageSectionFlexDirectionType;
   children: React.ReactNode;
-  containerStyle?: Pick<BoxProps, "sx">;
-  gridStyle?: Pick<GridProps, "sx">;
+  containerStyle?: Pick<BoxProps, "sx">["sx"];
+  gridStyle?: Pick<GridProps, "sx">["sx"];
 }
 
 export function PageSectionGridContainer(
@@ -20,7 +20,7 @@ export function PageSectionGridContainer(
       padding={"4.5rem 0"}
       sx={{
         backgroundColor: Colors?.common?.black,
-        ...props?.containerStyle?.sx,
+        ...props?.containerStyle,
       }}
     >
       <Grid
@@ -31,7 +31,7 @@ export function PageSectionGridContainer(
         sx={{
           margin: "auto",
           maxWidth: "calc(100% - 4rem)",
-          ...props?.gridStyle?.sx,
+          ...props?.gridStyle,
         }}
       >
         {props?.children}
