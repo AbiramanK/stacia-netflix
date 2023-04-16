@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { RouterProvider } from "react-router-dom";
 
 import "src/i18n/config";
 import "src/App.css";
@@ -11,6 +12,7 @@ import { LanguageSwitchContext } from "./contexts";
 import { getData, storeData } from "./utilities/Storage";
 import { APP_LANGUAGE_KEY } from "./constants/Keys";
 import { APP_DEFAULT_LANGUAGE } from "./constants/Configs";
+import RootRouter from "./RootRoot";
 
 function App() {
   const { i18n } = useTranslation();
@@ -84,7 +86,7 @@ function App() {
       value={{ language: language, updateLanguage }}
     >
       <ThemeProvider theme={theme}>
-        <LandingPage />
+        <RouterProvider router={RootRouter} />
       </ThemeProvider>
     </LanguageSwitchContext.Provider>
   );
