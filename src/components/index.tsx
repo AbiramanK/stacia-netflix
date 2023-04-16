@@ -17,6 +17,7 @@ import PageMenuList from "./PageMenuList";
 import LandingPageHomeContainer from "./LandingPageHomeContainer";
 import InputTextField from "./InputTextField";
 import PageDisplay1 from "./PageDisplay1";
+import PageSubtitle1 from "./PageSubtitle1";
 
 export {
   PageHeader,
@@ -38,4 +39,5 @@ export {
   LandingPageHomeContainer,
   InputTextField,
   PageDisplay1,
+  PageSubtitle1,
 };
