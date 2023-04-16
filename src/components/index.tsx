@@ -14,6 +14,7 @@ import PageFooter from "./PageFooter";
 import PageBody1 from "./PageBody1";
 import PageBody2 from "./PageBody2";
 import PageMenuList from "./PageMenuList";
+import LandingPageHomeContainer from "./LandingPageHomeContainer";
 
 export {
   PageHeader,
@@ -32,4 +33,5 @@ export {
   PageBody1,
   PageBody2,
   PageMenuList,
+  LandingPageHomeContainer,
 };

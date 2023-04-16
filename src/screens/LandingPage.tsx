@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 import LandingPageImage from "src/assets/images/netflix_landing_page.jpg";
@@ -15,9 +15,9 @@ import ChildrenWithRabbit from "src/assets/images/children-with-rabbit.png";
 import {
   FrequentlyAskedQuestions,
   GetStartedSection,
+  LandingPageHomeContainer,
   PageDescription1,
   PageFooter,
-  PageHeader,
   PageSection,
   PageSectionDivider,
   PageSectionGridContainer,
@@ -70,34 +70,13 @@ export function LandingPage(props: ILandingPageProps) {
 
   return (
     <React.Fragment>
-      <Container
-        maxWidth={"xl"}
-        sx={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(${LandingPageImage})`,
-          minHeight: "43.75rem",
-          pt: 3,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <PageHeader />
-        <Box
-          sx={{
-            flexGrow: 1,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            rowGap: "1rem",
-          }}
-        >
-          <PageTitle>{t("pages.landing-page.section1.title")}</PageTitle>
-          <PageDescription1>
-            {t("pages.landing-page.section1.description1")}
-          </PageDescription1>
-          <GetStartedSection />
-        </Box>
-      </Container>
+      <LandingPageHomeContainer backgroundImage={LandingPageImage}>
+        <PageTitle>{t("pages.landing-page.section1.title")}</PageTitle>
+        <PageDescription1>
+          {t("pages.landing-page.section1.description1")}
+        </PageDescription1>
+        <GetStartedSection />
+      </LandingPageHomeContainer>
       <PageSectionDivider />
       <PageSection
         pageTitle={t("pages.landing-page.section2.title")}
