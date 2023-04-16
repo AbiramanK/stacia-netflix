@@ -9,11 +9,18 @@ export interface IPageHeaderProps {
   showLanguageSwitch?: boolean;
   showSignInButton?: boolean;
   showAppLogo?: boolean;
+  onClickSignIn?: () => void;
   containerStyle?: Pick<GridProps, "sx">["sx"];
 }
 
 export function PageHeader(props: IPageHeaderProps) {
   const { t } = useTranslation();
+
+  function onClickSignIn() {
+    if (props?.onClickSignIn!) {
+      props?.onClickSignIn();
+    }
+  }
 
   return (
     <Grid
@@ -36,7 +43,9 @@ export function PageHeader(props: IPageHeaderProps) {
           </Grid>
           <Grid item>
             {props?.showSignInButton && (
-              <Button variant="contained">{t("common.buttons.sign-in")}</Button>
+              <Button variant="contained" onClick={onClickSignIn}>
+                {t("common.buttons.sign-in")}
+              </Button>
             )}
           </Grid>
         </Grid>

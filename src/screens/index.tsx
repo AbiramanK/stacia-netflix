@@ -1,3 +1,4 @@
 import LandingPage from "./LandingPage";
+import SignInContainer from "./SignInContainer";
 
-export { LandingPage };
+export { LandingPage, SignInContainer };

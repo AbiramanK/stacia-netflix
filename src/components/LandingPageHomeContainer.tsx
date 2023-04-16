@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Box,
@@ -25,6 +26,12 @@ export interface ILandingPageHomeContainerProps {
 export function LandingPageHomeContainer(
   props: ILandingPageHomeContainerProps
 ) {
+  const navigate = useNavigate();
+
+  function onClickSignIn() {
+    navigate("/login");
+  }
+
   return (
     <Container
       maxWidth={props?.containerMaxWidth}
@@ -41,6 +48,7 @@ export function LandingPageHomeContainer(
         showAppLogo={props?.showAppLogo}
         showLanguageSwitch={props?.showLanguageSwitch}
         showSignInButton={props?.showSignInButton}
+        onClickSignIn={onClickSignIn}
         containerStyle={props?.pageHeaderContainerStyle}
       />
       <Box
