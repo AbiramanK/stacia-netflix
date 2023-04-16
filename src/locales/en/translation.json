@@ -101,10 +101,17 @@
             "get-started": "Get Started"
         },
         "inputs": {
-            "email": "Email address"
+            "email": "Email address",
+            "password": "Password"
         },
         "texts": {
-            "membership-create": "Ready to watch? Enter your email to create or restart your membership."
+            "membership-create": "Ready to watch? Enter your email to create or restart your membership.",
+            "remember-me": "Remember me",
+            "need-help": "Need help?",
+            "new-to-netflix": "New to Netflix?",
+            "sign-up-now": "Sign up now",
+            "re-captcha": "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
+            "learn-more": "Learn more."
         }
     },
     "languages": {

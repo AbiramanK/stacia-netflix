@@ -4,6 +4,7 @@ const Colors = {
   common: {
     white: "#FFFFFF",
     black: "#000000",
+    lightGray: "#D3D3D3",
   },
 };
 

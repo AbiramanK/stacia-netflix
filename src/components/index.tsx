@@ -18,6 +18,7 @@ import LandingPageHomeContainer from "./LandingPageHomeContainer";
 import InputTextField from "./InputTextField";
 import PageDisplay1 from "./PageDisplay1";
 import PageSubtitle1 from "./PageSubtitle1";
+import SignIn from "./SignIn";
 
 export {
   PageHeader,
@@ -40,4 +41,5 @@ export {
   InputTextField,
   PageDisplay1,
   PageSubtitle1,
+  SignIn,
 };
