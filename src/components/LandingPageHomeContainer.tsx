@@ -5,6 +5,7 @@ import {
   ContainerProps,
   BoxProps,
   Breakpoint,
+  GridProps,
 } from "@mui/material";
 
 import PageHeader from "./PageHeader";
@@ -18,6 +19,7 @@ export interface ILandingPageHomeContainerProps {
   showSignInButton?: boolean;
   showAppLogo?: boolean;
   containerMaxWidth?: Breakpoint;
+  pageHeaderContainerStyle?: Pick<GridProps, "sx">["sx"];
 }
 
 export function LandingPageHomeContainer(
@@ -39,6 +41,7 @@ export function LandingPageHomeContainer(
         showAppLogo={props?.showAppLogo}
         showLanguageSwitch={props?.showLanguageSwitch}
         showSignInButton={props?.showSignInButton}
+        containerStyle={props?.pageHeaderContainerStyle}
       />
       <Box
         sx={{

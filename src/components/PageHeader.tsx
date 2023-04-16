@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Grid, Link } from "@mui/material";
+import { Button, Grid, GridProps, Link } from "@mui/material";
 
 import { ReactComponent as NetflixIcon } from "src/assets/images/netflix-logo.svg";
 import LanguageSwitchButton from "./LanguageSwitchButton";
@@ -9,13 +9,19 @@ export interface IPageHeaderProps {
   showLanguageSwitch?: boolean;
   showSignInButton?: boolean;
   showAppLogo?: boolean;
+  containerStyle?: Pick<GridProps, "sx">["sx"];
 }
 
 export function PageHeader(props: IPageHeaderProps) {
   const { t } = useTranslation();
 
   return (
-    <Grid container alignItems={"center"} justifyContent={"space-between"}>
+    <Grid
+      container
+      alignItems={"center"}
+      justifyContent={"space-between"}
+      sx={{ ...props?.containerStyle }}
+    >
       <Grid item>
         {props?.showAppLogo && (
           <Link href="/">
