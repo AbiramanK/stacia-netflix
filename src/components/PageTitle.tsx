@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Typography, TypographyStyle } from "@mui/material";
 import { Colors } from "src/constants/Colors";
 
 export interface IPageTitleProps {
   children: string;
+  titleStyle?: TypographyStyle;
 }
 
 export function PageTitle(props: IPageTitleProps) {
@@ -13,6 +14,7 @@ export function PageTitle(props: IPageTitleProps) {
       fontSize={"3rem"}
       fontWeight={"900"}
       color={Colors?.common?.white}
+      sx={{ ...props?.titleStyle }}
     >
       {props?.children}
     </Typography>
