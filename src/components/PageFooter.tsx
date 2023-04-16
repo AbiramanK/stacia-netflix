@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Grid, Link } from "@mui/material";
+import { Grid, GridProps, Link } from "@mui/material";
 
 import PageBody1 from "./PageBody1";
 import { APP_CONTACT_NUMBER } from "src/constants/Configs";
@@ -9,7 +9,9 @@ import LanguageSwitchButton from "./LanguageSwitchButton";
 import PageBody2 from "./PageBody2";
 import { Colors } from "src/constants/Colors";
 
-export interface IPageFooterProps {}
+export interface IPageFooterProps {
+  containerStyle?: Pick<GridProps, "sx">["sx"];
+}
 
 export function PageFooter(props: IPageFooterProps) {
   const { t } = useTranslation();
@@ -84,7 +86,7 @@ export function PageFooter(props: IPageFooterProps) {
   ];
 
   return (
-    <Grid container rowGap={4}>
+    <Grid container rowGap={4} sx={{ ...props?.containerStyle }}>
       <Grid item xs={12}>
         <PageBody1>
           <>
