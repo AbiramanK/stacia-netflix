@@ -19,6 +19,7 @@ import InputTextField from "./InputTextField";
 import PageDisplay1 from "./PageDisplay1";
 import PageSubtitle1 from "./PageSubtitle1";
 import SignIn from "./SignIn";
+import AccountMenu from "./AccountMenu";
 
 export {
   PageHeader,
@@ -42,4 +43,5 @@ export {
   PageDisplay1,
   PageSubtitle1,
   SignIn,
+  AccountMenu,
 };

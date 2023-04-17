@@ -98,11 +98,14 @@
     "common": {
         "buttons": {
             "sign-in": "Sign In",
-            "get-started": "Get Started"
+            "get-started": "Get Started",
+            "yes": "Yes",
+            "no": "No"
         },
         "inputs": {
             "email": "Email address",
-            "password": "Password"
+            "password": "Password",
+            "search": "Search"
         },
         "texts": {
             "membership-create": "Ready to watch? Enter your email to create or restart your membership.",
@@ -111,7 +114,26 @@
             "new-to-netflix": "New to Netflix?",
             "sign-up-now": "Sign up now",
             "re-captcha": "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
-            "learn-more": "Learn more."
+            "learn-more": "Learn more.",
+            "account-settings": "Account Settings",
+            "confirm-logout": "Confirm Logout",
+            "logout-confirmation-message": "Are you sure you want to Logout?"
+        },
+        "menus": {
+            "app-menu": {
+                "home": "home",
+                "tv-shows": "TV Shows",
+                "movies": "Movies",
+                "recebtly-added": "Recently Added",
+                "my-list": "My List"
+            },
+            "account-menu": {
+                "profile": "Profile",
+                "my-account": "My Account",
+                "add-another-account": "Add another account",
+                "settings": "Settings",
+                "logout": "Logout"
+            }
         }
     },
     "languages": {

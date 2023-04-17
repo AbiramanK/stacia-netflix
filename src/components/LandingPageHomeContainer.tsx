@@ -6,21 +6,17 @@ import {
   ContainerProps,
   BoxProps,
   Breakpoint,
-  GridProps,
 } from "@mui/material";
 
-import PageHeader from "./PageHeader";
+import PageHeader, { IPageHeaderProps } from "./PageHeader";
 
 export interface ILandingPageHomeContainerProps {
   children: React.ReactNode;
   backgroundImage?: string;
   containerStyle?: Pick<ContainerProps, "sx">["sx"];
   contentStyle?: Pick<BoxProps, "sx">["sx"];
-  showLanguageSwitch?: boolean;
-  showSignInButton?: boolean;
-  showAppLogo?: boolean;
   containerMaxWidth?: Breakpoint;
-  pageHeaderContainerStyle?: Pick<GridProps, "sx">["sx"];
+  pageHeaderProps?: IPageHeaderProps;
 }
 
 export function LandingPageHomeContainer(
@@ -36,7 +32,7 @@ export function LandingPageHomeContainer(
     <Container
       maxWidth={props?.containerMaxWidth}
       sx={{
-        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(${props?.backgroundImage})`,
+        background: `linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(${props?.backgroundImage})`,
         minHeight: "43.75rem",
         pt: 3,
         display: "flex",
@@ -44,13 +40,7 @@ export function LandingPageHomeContainer(
         ...props?.containerStyle,
       }}
     >
-      <PageHeader
-        showAppLogo={props?.showAppLogo}
-        showLanguageSwitch={props?.showLanguageSwitch}
-        showSignInButton={props?.showSignInButton}
-        onClickSignIn={onClickSignIn}
-        containerStyle={props?.pageHeaderContainerStyle}
-      />
+      <PageHeader onClickSignIn={onClickSignIn} {...props?.pageHeaderProps} />
       <Box
         sx={{
           flexGrow: 1,
@@ -71,8 +61,5 @@ export function LandingPageHomeContainer(
 export default LandingPageHomeContainer;
 
 LandingPageHomeContainer.defaultProps = {
-  showAppLogo: true,
-  showLanguageSwitch: true,
-  showSignInButton: true,
   containerMaxWidth: "xl",
 };

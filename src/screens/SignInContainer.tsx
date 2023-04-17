@@ -16,8 +16,6 @@ export function SignInContainer(props: ISignInContainerProps) {
   return (
     <LandingPageHomeContainer
       backgroundImage={LandingPageImage}
-      showLanguageSwitch={false}
-      showSignInButton={false}
       containerStyle={{
         pl: 0,
         pr: 0,
@@ -25,7 +23,13 @@ export function SignInContainer(props: ISignInContainerProps) {
           paddingInline: 0,
         },
       }}
-      pageHeaderContainerStyle={{ paddingInline: 3 }}
+      pageHeaderProps={{
+        showLanguageSwitch: false,
+        showSignInButton: false,
+        containerStyle: {
+          paddingInline: 3,
+        },
+      }}
     >
       <Grid container rowGap={18} justifyContent={"center"} sx={{ pt: 4 }}>
         <Grid item xs={4.75}>
