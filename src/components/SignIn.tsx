@@ -84,11 +84,6 @@ export function SignIn(props: ISignInProps) {
                     variant="contained"
                     fullWidth
                     disabled={email?.trim() === "" || password?.trim() === ""}
-                    sx={{
-                      ":disabled": {
-                        backgroundColor: Colors?.common?.lightGray,
-                      },
-                    }}
                     onClick={onSignInClick}
                   >
                     {t("common.buttons.sign-in")}

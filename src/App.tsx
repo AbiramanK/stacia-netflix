@@ -6,7 +6,6 @@ import { RouterProvider } from "react-router-dom";
 import "src/i18n/config";
 import "src/App.css";
 
-import { LandingPage } from "./screens";
 import { Colors } from "./constants/Colors";
 import { LanguageSwitchContext } from "./contexts";
 import { getData, storeData } from "./utilities/Storage";
@@ -19,6 +18,7 @@ function App() {
 
   const theme = createTheme({
     palette: {
+      mode: "dark",
       primary: { main: Colors.primary },
     },
     components: {
