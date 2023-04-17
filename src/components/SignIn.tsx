@@ -19,19 +19,12 @@ export function SignIn(props: ISignInProps) {
   function onEmailChange(event: React.ChangeEvent<HTMLInputElement>) {
     const email = event?.target?.value;
 
-    if (email?.trim() !== "") {
-      console.log("email text: ", email);
-      setEmail(email);
-    }
+    setEmail(email);
   }
   function onPasswordChange(event: React.ChangeEvent<HTMLInputElement>) {
     const password = event?.target?.value;
 
-    if (password?.trim() !== "") {
-      console.log("password text: ", password);
-
-      setPassword(password);
-    }
+    setPassword(password);
   }
 
   function onSignInClick() {}
