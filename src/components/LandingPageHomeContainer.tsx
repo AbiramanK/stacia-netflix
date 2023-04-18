@@ -11,7 +11,7 @@ import {
 import PageHeader, { IPageHeaderProps } from "./PageHeader";
 
 export interface ILandingPageHomeContainerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   backgroundImage?: string;
   containerStyle?: Pick<ContainerProps, "sx">["sx"];
   contentStyle?: Pick<BoxProps, "sx">["sx"];
