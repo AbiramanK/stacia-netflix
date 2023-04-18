@@ -100,7 +100,9 @@
             "sign-in": "Sign In",
             "get-started": "Get Started",
             "yes": "Yes",
-            "no": "No"
+            "no": "No",
+            "play": "Play",
+            "my-list": "My List"
         },
         "inputs": {
             "email": "Email address",
@@ -117,7 +119,9 @@
             "learn-more": "Learn more.",
             "account-settings": "Account Settings",
             "confirm-logout": "Confirm Logout",
-            "logout-confirmation-message": "Are you sure you want to Logout?"
+            "logout-confirmation-message": "Are you sure you want to Logout?",
+            "starring": "Starring",
+            "creators": "Creators"
         },
         "menus": {
             "app-menu": {
