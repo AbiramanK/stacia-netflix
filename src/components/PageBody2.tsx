@@ -4,7 +4,7 @@ import { Typography, TypographyStyle, TypographyVariant } from "@mui/material";
 import { Colors } from "src/constants/Colors";
 
 export interface IPageBody2Props {
-  children: string;
+  children: React.ReactNode;
   style?: TypographyStyle;
   variant?: TypographyVariant;
 }
