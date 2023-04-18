@@ -21,6 +21,7 @@ import PageSubtitle1 from "./PageSubtitle1";
 import SignIn from "./SignIn";
 import AccountMenu from "./AccountMenu";
 import TitlePage from "./TitlePage";
+import PageCategory from "./PageCategory";
 
 export {
   PageHeader,
@@ -46,4 +47,5 @@ export {
   SignIn,
   AccountMenu,
   TitlePage,
+  PageCategory,
 };
