@@ -1,3 +1,59 @@
+import battleshipThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/battleship.jpg";
+import constantineThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/constantine.jpg";
+import deathRaceThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/death-race.jpg";
+import godzillaVsKongThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/godzilla-vs-kong.jpg";
+import hulkThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/hulk.jpg";
+import journey2TheMysteriousIslandThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/journey-2-the-mysterious-island.jpg";
+import laraCroftTombRaiderTheCradleOfLifeThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/lara-croft-tomb-raider-the-cradle-of-life.jpg";
+import mowgliThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/mowgli.jpg";
+import pacificRimThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/pacific-rim.jpg";
+import spiderManNoWayHomeThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/spider-man-no-way-home.jpg";
+import terminatorThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/terminator.jpg";
+import transformersDarkOfTheMoonThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/transformers-dark-of-the-moon.jpg";
+import strangerThingsThumbnail from "src/assets/images/movies/popular-on-netflix/thumbnails/stranger-things.jpg";
+
+import battleshipCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/battleship.jpg";
+import constantineCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/constantine.jpg";
+import deathRaceCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/death-race.jpg";
+import godzillaVsKongCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/godzilla-vs-kong.jpg";
+import hulkCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/hulk.jpg";
+import journey2TheMysteriousIslandCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/journey-2-the-mysterious-island.jpg";
+import laraCroftTombRaiderTheCradleOfLifeCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/lara-croft-tomb-raider-the-cradle-of-life.jpg";
+import mowgliCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/mowgli.jpg";
+import pacificRimCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/pacific-rim.jpg";
+import spiderManNoWayHomeCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/spider-man-no-way-home.jpg";
+import terminatorCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/terminator.jpg";
+import transformersDarkOfTheMoonCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/transformers-dark-of-the-moon.jpg";
+import strangerThingsCPDesktop from "src/assets/images/movies/popular-on-netflix/cover-pictures/desktop/stranger-things.jpg";
+
+import battleshipCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/battleship.jpg";
+import constantineCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/constantine.jpg";
+import deathRaceCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/death-race.jpg";
+import godzillaVsKongCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/godzilla-vs-kong.jpg";
+import hulkCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/hulk.jpg";
+import journey2TheMysteriousIslandCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/journey-2-the-mysterious-island.jpg";
+import laraCroftTombRaiderTheCradleOfLifeCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/lara-croft-tomb-raider-the-cradle-of-life.jpg";
+import mowgliCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/mowgli.jpg";
+import pacificRimCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/pacific-rim.jpg";
+import spiderManNoWayHomeCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/spider-man-no-way-home.jpg";
+import terminatorCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/terminator.jpg";
+import transformersDarkOfTheMoonCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/transformers-dark-of-the-moon.jpg";
+import strangerThingsCPMobile from "src/assets/images/movies/popular-on-netflix/cover-pictures/mobile/stranger-things.jpg";
+
+import battleshipTitleImage from "src/assets/images/movies/popular-on-netflix/titles/battleship.png";
+import constantineTitleImage from "src/assets/images/movies/popular-on-netflix/titles/constantine.png";
+import deathRaceTitleImage from "src/assets/images/movies/popular-on-netflix/titles/death-race.png";
+import godzillaVsKongTitleImage from "src/assets/images/movies/popular-on-netflix/titles/godzilla-vs-kong.png";
+import hulkTitleImage from "src/assets/images/movies/popular-on-netflix/titles/hulk.png";
+import journey2TheMysteriousIslandTitleImage from "src/assets/images/movies/popular-on-netflix/titles/journey-2-the-mysterious-island.png";
+import laraCroftTombRaiderTheCradleOfLifeTitleImage from "src/assets/images/movies/popular-on-netflix/titles/lara-croft-tomb-raider-the-cradle-of-life.png";
+import mowgliTitleImage from "src/assets/images/movies/popular-on-netflix/titles/mowgli.png";
+import pacificRimTitleImage from "src/assets/images/movies/popular-on-netflix/titles/pacific-rim.png";
+import spiderManNoWayHomeTitleImage from "src/assets/images/movies/popular-on-netflix/titles/spider-man-no-way-home.png";
+import terminatorTitleImage from "src/assets/images/movies/popular-on-netflix/titles/terminator.png";
+import transformersDarkOfTheMoonTitleImage from "src/assets/images/movies/popular-on-netflix/titles/transformers-dark-of-the-moon.png";
+import strangerThingsTitleImage from "src/assets/images/movies/popular-on-netflix/titles/stranger-things.png";
+
 const top100Films = [
   { label: "The Shawshank Redemption", year: 1994 },
   { label: "The Godfather", year: 1972 },
@@ -149,4 +205,507 @@ const appMenu: AppMenuInterface[] = [
   },
 ];
 
-export { top100Films, appMenu };
+const categories: CategoryInterface[] = [
+  {
+    id: 1,
+    slug: "popular-on-netflix",
+    name: "Popular on Netflix",
+  },
+  {
+    id: 2,
+    slug: "trending-now",
+    name: "Trending Now",
+  },
+  {
+    id: 3,
+    slug: "continue-watching",
+    name: "Continue Watching",
+  },
+  {
+    id: 4,
+    slug: "anime",
+    name: "Anime",
+  },
+  {
+    id: 5,
+    slug: "comedies",
+    name: "Comedies",
+  },
+  {
+    id: 6,
+    slug: "sci-fi-fantasy ",
+    name: "Sci-fi & Fantasy ",
+  },
+  {
+    id: 7,
+    slug: "horror",
+    name: "Horror",
+  },
+  {
+    id: 8,
+    slug: "romantic",
+    name: "Romantic",
+  },
+  {
+    id: 9,
+    slug: "tv-shows",
+    name: "TV Shows",
+  },
+  {
+    id: 10,
+    slug: "action-adventure",
+    name: "Action & Adventure",
+  },
+];
+
+const genres: GenreInterface[] = [
+  {
+    id: 1,
+    slug: "us-movies",
+    name: "US Movies",
+  },
+  {
+    id: 2,
+    slug: "movies-based-on-books",
+    name: "Movies Based on Books",
+  },
+  {
+    id: 3,
+    slug: "us-tv-shows",
+    name: "US TV Shows",
+  },
+];
+
+const certificates: MovieCertificateInterface[] = [
+  {
+    id: 1,
+    slug: "ua-13+",
+    name: "U/A 13+",
+  },
+  {
+    id: 2,
+    slug: "ua-16+",
+    name: "U/A 16+",
+  },
+  {
+    id: 3,
+    slug: "a",
+    name: "A",
+  },
+];
+
+const popularOnNetflix: MovieInterface[] = [
+  {
+    id: 1,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "battleship",
+    name: "Battleship",
+    thumbnail: battleshipThumbnail,
+    coverPicture: {
+      desktop: battleshipCPDesktop,
+      mobile: battleshipCPMobile,
+    },
+    titleImage: battleshipTitleImage,
+    releaseYear: 2012,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 131,
+    description:
+      "The classic Battleship board game moves to the big screen in this at-sea adventure about defending planet Earth from a mysterious enemy fleet.",
+    starring: "Taylor Kitsch,Alexander Skarsgård,Rihanna",
+  },
+  {
+    id: 2,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "constantine",
+    name: "Constantine",
+    thumbnail: constantineThumbnail,
+    coverPicture: {
+      desktop: constantineCPDesktop,
+      mobile: constantineCPMobile,
+    },
+    titleImage: constantineTitleImage,
+    releaseYear: 2005,
+    genre: {
+      id: 2,
+      slug: "movies-based-on-books",
+      name: "Movies Based on Books",
+    },
+    certificate: {
+      id: 2,
+      slug: "ua-16+",
+      name: "U/A 16+",
+    },
+    duration: 120,
+    description:
+      "A chain-smoking, world-weary demon hunter helps a cop investigate her sister's death, plunging them into a plot involving the forces of heaven and hell.",
+    starring: "Keanu Reeves,Rachel Weisz,Shia LaBeouf",
+  },
+  {
+    id: 3,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "death-race",
+    name: "Death Race",
+    thumbnail: deathRaceThumbnail,
+    coverPicture: {
+      desktop: deathRaceCPDesktop,
+      mobile: deathRaceCPMobile,
+    },
+    titleImage: deathRaceTitleImage,
+    releaseYear: 2008,
+    genre: {
+      id: 2,
+      slug: "movies-based-on-books",
+      name: "Movies Based on Books",
+    },
+    certificate: {
+      id: 3,
+      slug: "a",
+      name: "A",
+    },
+    duration: 104,
+    description:
+      "A man wrongfully convicted of murder agrees to compete in a grueling three-day race against fellow inmates in exchange for his freedom.",
+    starring: "Jason Statham,Joan Allen,Ian McShane",
+  },
+  {
+    id: 4,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "godzilla-vs-kong",
+    name: "Godzilla vs. Kong",
+    thumbnail: godzillaVsKongThumbnail,
+    coverPicture: {
+      desktop: godzillaVsKongCPDesktop,
+      mobile: godzillaVsKongCPMobile,
+    },
+    titleImage: godzillaVsKongTitleImage,
+    releaseYear: 2021,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 113,
+    description:
+      "An ancient rivalry pits two legends against each other while a mission into uncharted terrain unearths clues to the Titans' very origins.",
+    starring: "Alexander Skarsgård,Millie Bobby Brown,Rebecca Hall",
+  },
+  {
+    id: 5,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "hulk",
+    name: "Hulk",
+    thumbnail: hulkThumbnail,
+    coverPicture: {
+      desktop: hulkCPDesktop,
+      mobile: hulkCPMobile,
+    },
+    titleImage: hulkTitleImage,
+    releaseYear: 2003,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 138,
+    description:
+      "Researcher Bruce Banner's failed experiments cause him to mutate into a powerful and savage green-skinned hulk when he loses control of his emotions.",
+    starring: "Eric Bana,Jennifer Connelly,Nick Nolte",
+  },
+  {
+    id: 6,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "journey-2-the-mysterious-island",
+    name: "Journey 2: The Mysterious Island",
+    thumbnail: journey2TheMysteriousIslandThumbnail,
+    coverPicture: {
+      desktop: journey2TheMysteriousIslandCPDesktop,
+      mobile: journey2TheMysteriousIslandCPMobile,
+    },
+    titleImage: journey2TheMysteriousIslandTitleImage,
+    releaseYear: 2012,
+    genre: {
+      id: 2,
+      slug: "movies-based-on-books",
+      name: "Movies Based on Books",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 94,
+    description:
+      "When a distress signal pinpoints his grandfather's location on an uncharted island, teen Sean Anderson teams with an unlikely ally: his stepfather.",
+    starring: "Dwayne Johnson,Josh Hutcherson,Michael Caine",
+  },
+  {
+    id: 7,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "lara-croft-tomb-raider-the-cradle-of-life",
+    name: "Lara Croft Tomb Raider: The Cradle of Life",
+    thumbnail: laraCroftTombRaiderTheCradleOfLifeThumbnail,
+    coverPicture: {
+      desktop: laraCroftTombRaiderTheCradleOfLifeCPDesktop,
+      mobile: laraCroftTombRaiderTheCradleOfLifeCPMobile,
+    },
+    titleImage: laraCroftTombRaiderTheCradleOfLifeTitleImage,
+    releaseYear: 2023,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 117,
+    description:
+      "Adventurer Lara Croft journeys to an underwater temple, where she finds a sphere that contains a map pointing to the mythical Pandora's box.",
+    starring: "Angelina Jolie,Gerard Butler,Ciarán Hinds",
+  },
+  {
+    id: 8,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "mowgli",
+    name: "Mowgli: Legend of the Jungle",
+    thumbnail: mowgliThumbnail,
+    coverPicture: {
+      desktop: mowgliCPDesktop,
+      mobile: mowgliCPMobile,
+    },
+    titleImage: mowgliTitleImage,
+    releaseYear: 2018,
+    genre: {
+      id: 2,
+      slug: "movies-based-on-books",
+      name: "Movies Based on Books",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 104,
+    description:
+      "An orphaned boy raised by animals in the jungle seizes his destiny while confronting a dangerous enemy -- and his own human origins.",
+    starring: "Christian Bale,Cate Blanchett,Benedict Cumberbatch",
+  },
+  {
+    id: 9,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "pacific-rim",
+    name: "Pacific Rim",
+    thumbnail: pacificRimThumbnail,
+    coverPicture: {
+      desktop: pacificRimCPDesktop,
+      mobile: pacificRimCPMobile,
+    },
+    titleImage: pacificRimTitleImage,
+    releaseYear: 2013,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 2,
+      slug: "ua-16+",
+      name: "U/A 16+",
+    },
+    duration: 131,
+    description:
+      "When the world's defenses fail against the threat of alien sea creatures, the task of saving the planet falls to a former pilot and a raw trainee.",
+    starring: "Charlie Hunnam,Idris Elba,Rinko Kikuchi",
+  },
+  {
+    id: 10,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "spider-man-no-way-home",
+    name: "Spider-Man: No Way Home (Extended Version)",
+    thumbnail: spiderManNoWayHomeThumbnail,
+    coverPicture: {
+      desktop: spiderManNoWayHomeCPDesktop,
+      mobile: spiderManNoWayHomeCPMobile,
+    },
+    titleImage: spiderManNoWayHomeTitleImage,
+    releaseYear: 2022,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 156,
+    description:
+      "When his identity is exposed, Spider-Man turns to Doctor Strange for help in this extended edition featuring deleted footage and a special introduction.",
+    starring: "Tom Holland,Zendaya,Benedict Cumberbatch",
+  },
+  {
+    id: 11,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "terminator-genisys",
+    name: "Terminator Genisys",
+    thumbnail: terminatorThumbnail,
+    coverPicture: {
+      desktop: terminatorCPDesktop,
+      mobile: terminatorCPMobile,
+    },
+    titleImage: terminatorTitleImage,
+    releaseYear: 2015,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 126,
+    description:
+      "Thirty years after judgment day, John Connor sends a friend back to save his mother and stop the conflagration, unaware that things have changed.",
+    starring: "Arnold Schwarzenegger,Jason Clarke,Emilia Clarke",
+  },
+  {
+    id: 12,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "transformers-dark-of-the-moon",
+    name: "Transformers: Dark of the Moon",
+    thumbnail: transformersDarkOfTheMoonThumbnail,
+    coverPicture: {
+      desktop: transformersDarkOfTheMoonCPDesktop,
+      mobile: transformersDarkOfTheMoonCPMobile,
+    },
+    titleImage: transformersDarkOfTheMoonTitleImage,
+    releaseYear: 2011,
+    genre: {
+      id: 1,
+      slug: "us-movies",
+      name: "US Movies",
+    },
+    certificate: {
+      id: 1,
+      slug: "ua-13+",
+      name: "U/A 13+",
+    },
+    duration: 155,
+    description:
+      "When Optimus Prime learns of a downed Transformers ship on the moon, he leads a mission to rescue the pilot left behind: his mentor, Sentinel Prime.",
+    starring: "Shia LaBeouf,Rosie Huntington-Whiteley,Josh Duhamel",
+  },
+  {
+    id: 13,
+    category: {
+      id: 1,
+      slug: "popular-on-netflix",
+      name: "Popular on Netflix",
+    },
+    slug: "stranger-things",
+    name: "Stranger Things",
+    thumbnail: strangerThingsThumbnail,
+    coverPicture: {
+      desktop: strangerThingsCPDesktop,
+      mobile: strangerThingsCPMobile,
+    },
+    titleImage: strangerThingsTitleImage,
+    releaseYear: 2016,
+    genre: {
+      id: 3,
+      slug: "us-tv-shows",
+      name: "US Tv Shows",
+    },
+    certificate: {
+      id: 2,
+      slug: "ua-16+",
+      name: "U/A 16+",
+    },
+    numberOfSeasons: 4,
+    description:
+      "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+    starring: "Winona Ryder,David Harbour,Millie Bobby Brown",
+    creators: "The Duffer Brothers",
+  },
+];
+
+export {
+  top100Films,
+  appMenu,
+  popularOnNetflix,
+  categories,
+  genres,
+  certificates,
+};
