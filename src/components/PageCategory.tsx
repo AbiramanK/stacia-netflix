@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   Grid,
@@ -27,6 +28,8 @@ export interface IPageCategoryProps {
 }
 
 export function PageCategory(props: IPageCategoryProps) {
+  const navigate = useNavigate();
+
   const [activeIndex, setActiveIndex] = useState<number>();
 
   function onLeftArrowClick() {
@@ -45,6 +48,14 @@ export function PageCategory(props: IPageCategoryProps) {
         ? listLength - 1
         : (state ?? 0) + scrollNumberOfItems
     );
+  }
+
+  function onTitleClick(movie: MovieInterface) {
+    navigate(`/title/${movie?.id}`, {
+      state: {
+        movie,
+      },
+    });
   }
 
   return (
@@ -83,7 +94,10 @@ export function PageCategory(props: IPageCategoryProps) {
             >
               {props?.list?.map((movie, index) => (
                 <ListItem key={index} sx={{ p: 0 }}>
-                  <ListItemButton autoFocus={index === activeIndex}>
+                  <ListItemButton
+                    autoFocus={index === activeIndex}
+                    onClick={() => onTitleClick(movie)}
+                  >
                     <Grid
                       container
                       flexDirection={"column"}
