@@ -22,6 +22,7 @@ import SignIn from "./SignIn";
 import AccountMenu from "./AccountMenu";
 import TitlePage from "./TitlePage";
 import PageCategory from "./PageCategory";
+import PageNotFound from "./PageNotFound";
 
 export {
   PageHeader,
@@ -48,4 +49,5 @@ export {
   AccountMenu,
   TitlePage,
   PageCategory,
+  PageNotFound,
 };
