@@ -107,7 +107,8 @@
         "inputs": {
             "email": "Email address",
             "password": "Password",
-            "search": "Search"
+            "search": "Search",
+            "category": "Category"
         },
         "texts": {
             "membership-create": "Ready to watch? Enter your email to create or restart your membership.",
