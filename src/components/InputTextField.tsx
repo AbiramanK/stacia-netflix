@@ -16,6 +16,7 @@ export interface IInputTextFieldProps {
   type?: React.InputHTMLAttributes<unknown>["type"];
   onTextChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  defaultValue?: string;
 }
 
 export function InputTextField(props: IInputTextFieldProps) {
@@ -43,6 +44,7 @@ export function InputTextField(props: IInputTextFieldProps) {
       name={props?.name}
       label={props?.label}
       id={props?.id}
+      defaultValue={props?.defaultValue}
       onChange={onTextChange}
       variant={props?.variant}
       error={props?.error}
