@@ -24,6 +24,7 @@ import PageDescription1 from "./PageDescription1";
 import MoviesList from "./MoviesList";
 import MovieCard from "./MovieCard";
 import { categories } from "src/constants/data";
+import InputTextField from "./InputTextField";
 
 const scrollNumberOfItems = 5;
 
@@ -55,6 +56,8 @@ export function PageCategory(props: IPageCategoryProps) {
   const [selectedCategory, setSelectedCategory] = useState<CategoryInterface>(
     categories[0]
   );
+  const [searchMovie, setSearchMovie] = useState<string>("");
+  const [movieList, setMoviesList] = useState<MovieInterface[]>(props?.list);
 
   function onAddClick(category: CategoryInterface) {
     if (props?.onAddClick!) {
@@ -79,6 +82,20 @@ export function PageCategory(props: IPageCategoryProps) {
 
   function onOpDialogClose() {
     setOpenOpDialog(false);
+  }
+
+  function onMovieSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const search = event?.target?.value?.trim();
+
+    if (search !== "") {
+      const list = props?.list?.filter((movie) =>
+        movie?.name?.toLowerCase().includes(search?.toLowerCase())
+      );
+
+      setMoviesList(list);
+    } else {
+      setMoviesList(props?.list);
+    }
   }
 
   return (
@@ -112,11 +129,30 @@ export function PageCategory(props: IPageCategoryProps) {
         TransitionComponent={Transition}
       >
         <AppBar sx={{ position: "relative" }}>
-          <Toolbar>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+          <Toolbar
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Typography sx={{ ml: 2 }} variant="h6" component="div">
               Movies
             </Typography>
-
+            <Autocomplete
+              disablePortal
+              id="search-box"
+              options={categories}
+              getOptionLabel={(option) => option?.name}
+              value={selectedCategory}
+              sx={{
+                width: 300,
+              }}
+              size={"small"}
+              renderInput={(params) => (
+                <TextField {...params} label={t("common.inputs.category")} />
+              )}
+            />
             <IconButton
               edge="end"
               color="inherit"
@@ -127,21 +163,17 @@ export function PageCategory(props: IPageCategoryProps) {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Autocomplete
-          disablePortal
+        <InputTextField
           id="search-box"
-          options={categories}
-          getOptionLabel={(option) => option?.name}
-          value={selectedCategory}
-          sx={{
+          size={"medium"}
+          label={`${t("common.inputs.search")} ${t("common.inputs.movies")}`}
+          defaultValue={searchMovie}
+          onTextChange={onMovieSearchChange}
+          inputStyle={{
             width: 300,
             mt: 3,
             ml: 6,
           }}
-          size={"medium"}
-          renderInput={(params) => (
-            <TextField {...params} label={t("common.inputs.category")} />
-          )}
         />
         <List
           sx={{
@@ -153,8 +185,8 @@ export function PageCategory(props: IPageCategoryProps) {
             mt: 2,
           }}
         >
-          {props?.list?.map((movie, index) => (
-            <ListItem key={index} sx={{ p: 0, width: 285 }}>
+          {movieList?.map((movie, index) => (
+            <ListItem key={movie?.id} sx={{ p: 0, width: 285 }}>
               <MovieCard
                 image={movie?.thumbnail}
                 title={movie?.name}
