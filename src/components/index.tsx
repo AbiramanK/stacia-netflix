@@ -23,6 +23,7 @@ import AccountMenu from "./AccountMenu";
 import TitlePage from "./TitlePage";
 import PageCategory from "./PageCategory";
 import PageNotFound from "./PageNotFound";
+import MovieCard from "./MovieCard";
 
 export {
   PageHeader,
@@ -50,4 +51,5 @@ export {
   TitlePage,
   PageCategory,
   PageNotFound,
+  MovieCard,
 };
