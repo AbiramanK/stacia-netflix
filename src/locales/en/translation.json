@@ -108,7 +108,8 @@
             "email": "Email address",
             "password": "Password",
             "search": "Search",
-            "category": "Category"
+            "category": "Category",
+            "movies": "Movies"
         },
         "texts": {
             "membership-create": "Ready to watch? Enter your email to create or restart your membership.",
