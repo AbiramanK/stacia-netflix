@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import { Grid, GridProps, Link } from "@mui/material";
 
 import PageBody1 from "./PageBody1";
-import { APP_CONTACT_NUMBER } from "src/constants/Configs";
+import { APP_CONTACT_NUMBER } from "src/constants/configs";
 import PageMenuList, { PageMenuInterface } from "./PageMenuList";
 import LanguageSwitchButton from "./LanguageSwitchButton";
 import PageBody2 from "./PageBody2";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export interface IPageFooterProps {
   containerStyle?: Pick<GridProps, "sx">["sx"];

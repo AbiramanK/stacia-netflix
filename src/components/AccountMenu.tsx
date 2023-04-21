@@ -28,7 +28,7 @@ import CastIcon from "@mui/icons-material/Cast";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 import { top100Films } from "src/constants/data";
 
 export interface IAccountMenuProps {

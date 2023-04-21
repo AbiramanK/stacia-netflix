@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export interface IPageDescription1Props {
   children: string;
