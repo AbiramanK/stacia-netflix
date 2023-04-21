@@ -4,7 +4,7 @@ import { Button, Card, Checkbox, Grid, Link } from "@mui/material";
 
 import PageTitle from "./PageTitle";
 import InputTextField from "./InputTextField";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 import PageDisplay1 from "./PageDisplay1";
 import PageSubtitle1 from "./PageSubtitle1";
 

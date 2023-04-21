@@ -10,7 +10,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 
 import PageDescription1 from "./PageDescription1";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 import { deepmerge } from "@mui/utils";
 
 export interface IQuestionAnswerAccordionProps {

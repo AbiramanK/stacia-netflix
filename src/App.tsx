@@ -6,11 +6,11 @@ import { RouterProvider } from "react-router-dom";
 import "src/i18n/config";
 import "src/App.css";
 
-import { Colors } from "./constants/Colors";
+import { Colors } from "./constants/colors";
 import { LanguageSwitchContext } from "./contexts";
 import { getData, storeData } from "./utilities/Storage";
-import { APP_LANGUAGE_KEY } from "./constants/Keys";
-import { APP_DEFAULT_LANGUAGE } from "./constants/Configs";
+import { APP_LANGUAGE_KEY } from "./constants/keys";
+import { APP_DEFAULT_LANGUAGE } from "./constants/configs";
 import RootRouter from "./RootRoot";
 
 function App() {

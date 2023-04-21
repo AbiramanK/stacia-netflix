@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, TypographyStyle, TypographyVariant } from "@mui/material";
 
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export interface IPageBody2Props {
   children: React.ReactNode;

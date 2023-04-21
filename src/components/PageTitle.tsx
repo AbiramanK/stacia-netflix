@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, TypographyStyle } from "@mui/material";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export interface IPageTitleProps {
   children: string;

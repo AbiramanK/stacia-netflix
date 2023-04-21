@@ -15,7 +15,7 @@ import { deepmerge } from "@mui/utils";
 import LanguageIcon from "@mui/icons-material/Language";
 
 import { LanguageSwitchContext } from "src/contexts";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export interface ILanguageSwitchButtonProps {}
 

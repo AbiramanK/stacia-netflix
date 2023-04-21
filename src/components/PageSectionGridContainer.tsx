@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, BoxProps, Grid, GridProps } from "@mui/material";
 
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 
 export type PageSectionFlexDirectionType = "row" | "row-reverse";
 

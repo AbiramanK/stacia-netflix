@@ -24,7 +24,7 @@ import {
   PageTitle,
   PageVideoImagePileIn,
 } from "src/components";
-import { Colors } from "src/constants/Colors";
+import { Colors } from "src/constants/colors";
 import { QuestionAnswerInterface } from "src/components/FrequentlyAskedQuetions";
 
 export interface ILandingPageProps {}
