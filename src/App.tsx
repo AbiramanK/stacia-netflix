@@ -8,7 +8,7 @@ import "src/App.css";
 
 import { Colors } from "./constants/colors";
 import { LanguageSwitchContext } from "./contexts";
-import { getData, storeData } from "./utilities/Storage";
+import { getData, storeData } from "./utilities/storage";
 import { APP_LANGUAGE_KEY } from "./constants/keys";
 import { APP_DEFAULT_LANGUAGE } from "./constants/configs";
 import RootRouter from "./RootRoot";
