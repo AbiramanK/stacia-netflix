@@ -53,6 +53,7 @@ import spiderManNoWayHomeTitleImage from "src/assets/images/movies/popular-on-ne
 import terminatorTitleImage from "src/assets/images/movies/popular-on-netflix/titles/terminator.png";
 import transformersDarkOfTheMoonTitleImage from "src/assets/images/movies/popular-on-netflix/titles/transformers-dark-of-the-moon.png";
 import strangerThingsTitleImage from "src/assets/images/movies/popular-on-netflix/titles/stranger-things.png";
+import { AuthenticationOutput } from "src/@types/api";
 
 const top100Films = [
   { label: "The Shawshank Redemption", year: 1994 },
@@ -701,6 +702,42 @@ const popularOnNetflix: MovieInterface[] = [
   },
 ];
 
+const loginResponses: AuthenticationOutput[] = [
+  {
+    id: 1,
+    isActive: true,
+    email: "customer@staciacorp.com",
+    firstName: "Customer",
+    lastName: "Customer",
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJjdXN0b21lckBzdGFjaWFjb3JwLmNvbSJ9.EV4OGHQysSc47W46rYcYOddwooUtPEuiDBqT3-HJC20",
+    type: "customer",
+    userName: "customer",
+  },
+  {
+    id: 2,
+    isActive: true,
+    email: "manager@staciacorp.com",
+    firstName: "Manager",
+    lastName: "Manager",
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJtYW5hZ2VyQHN0YWNpYWNvcnAuY29tIn0.1Ye0e4CNzMAMZRIqODm7bbJ-1vum2asvJcg_mOnhg1I",
+    type: "manager",
+    userName: "manager",
+  },
+  {
+    id: 3,
+    isActive: true,
+    email: "admin@staciacorp.com",
+    firstName: "Admin",
+    lastName: "Admin",
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBzdGFjaWFjb3JwLmNvbSJ9.1nazy5V8Q7GmT0XLCtBhr5rcc0zVWieCmWdLOmFgOXo",
+    type: "admin",
+    userName: "admin",
+  },
+];
+
 export {
   top100Films,
   appMenu,
@@ -708,4 +745,5 @@ export {
   categories,
   genres,
   certificates,
+  loginResponses,
 };
