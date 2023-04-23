@@ -1,5 +1,6 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
+import { Dashboard } from "./admin";
 
 import { AuthLayout } from "./layouts";
 import { CheckAuth, RequireAuth } from "./providers/AuthProvider";
@@ -38,6 +39,14 @@ export const RootRouter = createBrowserRouter([
         element: (
           <RequireAuth roles={["customer", "manager"]}>
             <TitlePageContainer />
+          </RequireAuth>
+        ),
+      },
+      {
+        path: "dashboard",
+        element: (
+          <RequireAuth roles={["admin"]}>
+            <Dashboard />
           </RequireAuth>
         ),
       },

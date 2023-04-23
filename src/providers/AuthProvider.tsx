@@ -64,6 +64,9 @@ function CheckAuth({ children }: { children: JSX.Element }) {
   const location = useLocation();
 
   if (auth.user) {
+    if (auth?.user?.type === "admin") {
+      return <Navigate to="/dashboard" state={{ from: location }} replace />;
+    }
     return <Navigate to="/home" state={{ from: location }} replace />;
   }
 
