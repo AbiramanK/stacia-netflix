@@ -140,6 +140,9 @@
                 "settings": "Settings",
                 "logout": "Logout"
             }
+        },
+        "responses": {
+            "email-password-incorrect": "Email or Password incorrect"
         }
     },
     "languages": {

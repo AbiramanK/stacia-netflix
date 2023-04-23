@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Card, Checkbox, Grid, Link } from "@mui/material";
+import {
+  Button,
+  Card,
+  Checkbox,
+  CircularProgress,
+  Grid,
+  Link,
+} from "@mui/material";
 
 import PageTitle from "./PageTitle";
 import InputTextField from "./InputTextField";
@@ -8,7 +15,10 @@ import { Colors } from "src/constants/colors";
 import PageDisplay1 from "./PageDisplay1";
 import PageSubtitle1 from "./PageSubtitle1";
 
-export interface ISignInProps {}
+export interface ISignInProps {
+  onSignInClick?: (email: string, password: string) => void;
+  loading?: boolean;
+}
 
 export function SignIn(props: ISignInProps) {
   const { t } = useTranslation();
@@ -27,7 +37,13 @@ export function SignIn(props: ISignInProps) {
     setPassword(password);
   }
 
-  function onSignInClick() {}
+  function onSignInClick() {
+    if (email!?.trim() !== "" && password!?.trim() !== "") {
+      if (props?.onSignInClick!) {
+        props?.onSignInClick(email, password);
+      }
+    }
+  }
 
   return (
     <Card
@@ -83,10 +99,19 @@ export function SignIn(props: ISignInProps) {
                     size="large"
                     variant="contained"
                     fullWidth
-                    disabled={email?.trim() === "" || password?.trim() === ""}
+                    disabled={
+                      email?.trim() === "" ||
+                      password?.trim() === "" ||
+                      props?.loading
+                    }
                     onClick={onSignInClick}
+                    sx={{ borderRadius: 0 }}
                   >
-                    {t("common.buttons.sign-in")}
+                    {props?.loading ? (
+                      <CircularProgress size={26.25} />
+                    ) : (
+                      t("common.buttons.sign-in")
+                    )}
                   </Button>
                 </Grid>
                 <Grid item xs={12}>
