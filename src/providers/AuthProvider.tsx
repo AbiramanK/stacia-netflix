@@ -4,7 +4,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthenticationOutput, UserType } from "src/@types/api";
 import { USER_DETAILS_KEY } from "src/constants/keys";
 import { AuthContext } from "src/contexts";
-import { getData, removeAll, storeData } from "src/utilities/storage";
+import { getData, removeAllData, storeData } from "src/utilities/storage";
 
 function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = React.useState<AuthenticationOutput | null>(null);
@@ -25,7 +25,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logout = (callback: VoidFunction) => {
     setUser(null);
-    removeAll();
+    removeAllData();
     callback();
   };
 
