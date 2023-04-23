@@ -1,6 +1,9 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
+import { AuthLayout } from "./layouts";
+import { CheckAuth, RequireAuth } from "./providers/AuthProvider";
+
 import {
   Home,
   LandingPage,
@@ -9,10 +12,37 @@ import {
 } from "./screens";
 
 export const RootRouter = createBrowserRouter([
-  { path: "/", element: <LandingPage /> },
-  { path: "/login", element: <SignInContainer /> },
-  { path: "/home", element: <Home /> },
-  { path: "/title/:id", element: <TitlePageContainer /> },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      { path: "", element: <LandingPage /> },
+      {
+        path: "login",
+        element: (
+          <CheckAuth>
+            <SignInContainer />
+          </CheckAuth>
+        ),
+      },
+      {
+        path: "home",
+        element: (
+          <RequireAuth roles={["customer", "manager"]}>
+            <Home />
+          </RequireAuth>
+        ),
+      },
+      {
+        path: "title/:id",
+        element: (
+          <RequireAuth roles={["customer", "manager"]}>
+            <TitlePageContainer />
+          </RequireAuth>
+        ),
+      },
+    ],
+  },
 ]);
 
 export default RootRouter;
