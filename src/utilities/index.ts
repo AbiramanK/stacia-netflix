@@ -1,3 +1,5 @@
+import { VariantType, enqueueSnackbar } from "notistack";
+
 function shuffleArray(array: Array<any>) {
   return array
     .map((value) => ({ value, sort: Math.random() }))
@@ -5,4 +7,10 @@ function shuffleArray(array: Array<any>) {
     .map(({ value }) => value);
 }
 
-export { shuffleArray };
+function notify(message: string, variant?: VariantType) {
+  enqueueSnackbar(message, {
+    variant,
+  });
+}
+
+export { shuffleArray, notify };
