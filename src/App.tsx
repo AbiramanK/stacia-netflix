@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { RouterProvider } from "react-router-dom";
+import { SnackbarProvider } from "notistack";
 
 import "src/i18n/config";
 import "src/App.css";
@@ -97,6 +98,7 @@ function App() {
       value={{ language: language, updateLanguage }}
     >
       <ThemeProvider theme={theme}>
+        <SnackbarProvider maxSnack={3} />
         <RouterProvider router={RootRouter} />
       </ThemeProvider>
     </LanguageSwitchContext.Provider>
