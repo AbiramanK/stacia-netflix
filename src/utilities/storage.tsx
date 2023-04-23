@@ -6,12 +6,12 @@ function getData(key: string) {
   return localStorage.getItem(key);
 }
 
-function removeKey(key: string) {
+function removeDataByKey(key: string) {
   localStorage.removeItem(key);
 }
 
-function removeAll() {
+function removeAllData() {
   localStorage.clear();
 }
 
-export { storeData, getData, removeKey, removeAll };
+export { storeData, getData, removeDataByKey, removeAllData };
