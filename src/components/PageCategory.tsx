@@ -25,6 +25,7 @@ import MoviesList from "./MoviesList";
 import MovieCard from "./MovieCard";
 import { categories } from "src/constants/data";
 import InputTextField from "./InputTextField";
+import { useAuth } from "src/providers/AuthProvider";
 
 const scrollNumberOfItems = 5;
 
@@ -51,6 +52,7 @@ export interface IPageCategoryProps {
 export function PageCategory(props: IPageCategoryProps) {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const auth = useAuth();
 
   const [openOpDialog, setOpenOpDialog] = useState<boolean>(false);
   const [selectedCategory, setSelectedCategory] = useState<CategoryInterface>(
@@ -106,9 +108,11 @@ export function PageCategory(props: IPageCategoryProps) {
             <PageDescription1>{props?.category?.name}</PageDescription1>
           </Grid>
           <Grid item>
-            <IconButton onClick={() => onAddClick(props?.category)}>
-              <AddIcon sx={{ fontSize: 28 }} />
-            </IconButton>
+            {auth?.user?.type === "manager" && (
+              <IconButton onClick={() => onAddClick(props?.category)}>
+                <AddIcon sx={{ fontSize: 28 }} />
+              </IconButton>
+            )}
           </Grid>
         </Grid>
       </Grid>
