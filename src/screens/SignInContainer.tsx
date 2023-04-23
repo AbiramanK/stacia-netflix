@@ -41,7 +41,7 @@ export function SignInContainer(props: ISignInContainerProps) {
             break;
 
           case "admin":
-            auth.login(user, () => navigate("/home"));
+            auth.login(user, () => navigate("/dashboard"));
             break;
 
           default:
