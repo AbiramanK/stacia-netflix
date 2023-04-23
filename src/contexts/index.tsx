@@ -1,5 +1,9 @@
 import React from "react";
-import { LanguageSwitchContextInterface } from "src/@types/context";
+
+import {
+  AuthContextType,
+  LanguageSwitchContextInterface,
+} from "src/@types/context";
 
 const LanguageSwitchContext: React.Context<LanguageSwitchContextInterface> =
   React.createContext<LanguageSwitchContextInterface>({
@@ -7,4 +11,6 @@ const LanguageSwitchContext: React.Context<LanguageSwitchContextInterface> =
     updateLanguage(language) {},
   });
 
-export { LanguageSwitchContext };
+const AuthContext = React.createContext<AuthContextType>(null!);
+
+export { LanguageSwitchContext, AuthContext };

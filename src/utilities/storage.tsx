@@ -2,16 +2,16 @@ function storeData(key: string, value: string) {
   localStorage.setItem(key, value);
 }
 
-async function getData(key: string) {
-  return await localStorage.getItem(key);
+function getData(key: string) {
+  return localStorage.getItem(key);
 }
 
-async function removeKey(key: string) {
-  await localStorage.removeItem(key);
+function removeKey(key: string) {
+  localStorage.removeItem(key);
 }
 
-async function removeAll() {
-  await localStorage.clear();
+function removeAll() {
+  localStorage.clear();
 }
 
 export { storeData, getData, removeKey, removeAll };

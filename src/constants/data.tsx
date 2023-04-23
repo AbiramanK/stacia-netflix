@@ -185,7 +185,7 @@ const top100Films = [
 const appMenu: AppMenuInterface[] = [
   {
     title: "Home",
-    link: "#",
+    link: "/home",
   },
   {
     title: "TV Shows",
