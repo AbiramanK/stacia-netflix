@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import {
   Autocomplete,
   Avatar,
@@ -30,6 +31,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import { Colors } from "src/constants/colors";
 import { top100Films } from "src/constants/data";
+import { useAuth } from "src/providers/AuthProvider";
 
 export interface IAccountMenuProps {
   logout?: () => void;
@@ -37,6 +39,9 @@ export interface IAccountMenuProps {
 
 export function AccountMenu(props: IAccountMenuProps) {
   const { t } = useTranslation();
+  const auth = useAuth();
+
+  const navigate = useNavigate();
 
   const [settingsAnchorEl, setSettingsAnchorEl] = useState<null | HTMLElement>(
     null
@@ -74,6 +79,8 @@ export function AccountMenu(props: IAccountMenuProps) {
     onLogoutCancel();
     if (props?.logout!) {
       props?.logout();
+    } else {
+      auth?.logout(() => navigate("/"));
     }
   }
 
