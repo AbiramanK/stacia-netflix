@@ -58,7 +58,7 @@ export function PageCategory(props: IPageCategoryProps) {
   const [selectedCategory, setSelectedCategory] = useState<CategoryInterface>(
     categories[0]
   );
-  const [searchMovie, setSearchMovie] = useState<string>("");
+
   const [movieList, setMoviesList] = useState<MovieInterface[]>(props?.list);
 
   function onAddClick(category: CategoryInterface) {
@@ -171,7 +171,6 @@ export function PageCategory(props: IPageCategoryProps) {
           id="search-box"
           size={"medium"}
           label={`${t("common.inputs.search")} ${t("common.inputs.movies")}`}
-          defaultValue={searchMovie}
           onTextChange={onMovieSearchChange}
           inputStyle={{
             width: 300,
